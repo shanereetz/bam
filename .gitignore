@@ -14,3 +14,6 @@ data_raw/
 data_processed/
 uv.lock
 notes.md
+# Local acquisition runtime and driver source
+.venv/
+vendor/

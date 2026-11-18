@@ -1,171 +1,127 @@
 # Copyright 2025 Marc Duclusaud & Grégoire Passault
+# Licensed under the Apache License, Version 2.0.
+"""BAM Feetech recording, adapted for a measured bench and configurable port/ID.
 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at:
-
-#     http://www.apache.org/licenses/LICENSE-2.0
-
-# from bam.feetech.feetech_pwm_control import FeetechPWMControl
+Uses the upstream Pypot driver, BAM trajectories and separate feedback reads.
+As upstream, load and temperature are zero placeholders, not measurements.
+"""
 from pypot.feetech import FeetechSTS3215IO
-import rustypot
-import json
-import datetime
-import os
-import numpy as np
 import argparse
+import datetime
+import json
 import time
-from bam.trajectory import *
-
-arg_parser = argparse.ArgumentParser()
-arg_parser.add_argument("--mass", type=float, required=True)
-arg_parser.add_argument("--length", type=float, required=True)
-arg_parser.add_argument("--port", type=str, default="/dev/ttyUSB0")
-arg_parser.add_argument("--logdir", type=str, required=True)
-arg_parser.add_argument("--trajectory", type=str, default="lift_and_drop")
-arg_parser.add_argument("--motor", type=str, required=True)
-arg_parser.add_argument("--kp", type=int, default=32)
-arg_parser.add_argument("--vin", type=float, default=15.0)
-arg_parser.add_argument("--id", type=int, required=True)
-args = arg_parser.parse_args()
-
-os.makedirs(args.logdir, exist_ok=True)
-
-if args.trajectory not in trajectories:
-    raise ValueError(f"Unknown trajectory: {args.trajectory}")
-
-# motors = {
-#     "test": (1, "sts3215"),
-# }
-ids = [1]
-
-# motor = FeetechPWMControl(id=args.id)
-io = FeetechSTS3215IO("/dev/ttyACM0")
-io.set_mode({1: 0})
-# control = rustypot.feetech("/dev/ttyACM0", 1000000)
-# control.set_mode(ids, 0)
-
-trajectory = trajectories[args.trajectory]
-
-start = time.time()
-while time.time() - start < 1.0:
-    goal_position, torque_enable = trajectory(0)
-    if torque_enable:
-        io.set_goal_position({1: np.rad2deg(goal_position)})
-        # control.write_goal_position(ids, [goal_position])
-        io.enable_torque([1])
-        # control.enable_torque(ids)
-        # motor.goal_position = np.rad2deg(goal_position)
-        # motor.enable_torque()
-    else:
-        io.disable_torque([1])
-        # control.disable_torque(ids)
-        # motor.disable_torque()
-    # control.set_kps(ids, [32])
-    io.set_P_coefficient({1: args.kp})
-    io.set_D_coefficient({1: 0})
-
-    # motor.kp = args.kp
+from pathlib import Path
+import numpy as np
+from bam.trajectory import trajectories
 
 
-start = time.time()
-data = {
-    "mass": args.mass,
-    "length": args.length,
-    "kp": args.kp,
-    "vin": args.vin,
-    "motor": args.motor,
-    "trajectory": args.trajectory,
-    "entries": [],
-}
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--mass',type=float,required=True)
+    p.add_argument('--arm-mass',type=float,required=True)
+    p.add_argument('--length',type=float,required=True)
+    p.add_argument('--port',required=True)
+    p.add_argument('--id',type=int,required=True)
+    p.add_argument('--motor',required=True)
+    p.add_argument('--vin',type=float,required=True)
+    p.add_argument('--logdir',required=True)
+    p.add_argument('--trajectory',choices=list(trajectories),default='lift_and_drop')
+    p.add_argument('--kp',type=int,default=32)
+    p.add_argument('--zero-ticks',type=int,required=True)
+    p.add_argument('--direction',type=int,choices=[-1,1],default=-1)
+    a=p.parse_args()
+    trajectory=trajectories[a.trajectory]
+    # Pypot maps 0..4095 to -180..180 degrees, with 0.01 degree rounding.
+    zero_degrees=360*a.zero_ticks/4095-180
+    def motor_angle(q):return zero_degrees+a.direction*np.rad2deg(q)
+    angles=[motor_angle(trajectory(t)[0]) for t in np.linspace(0,6,6001)]
+    if min(angles)<-180 or max(angles)>180:raise ValueError('Trajectory crosses encoder boundary')
+    dest=Path(a.logdir);dest.mkdir(parents=True,exist_ok=True)
+    path=dest/(datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')+f'_{a.trajectory}_kp{a.kp}.json')
+    data=dict(mass=a.mass,arm_mass=a.arm_mass,length=a.length,kp=a.kp,vin=a.vin,
+        motor=a.motor,trajectory=a.trajectory,entries=[],complete=False,
+        metadata=dict(driver='pypot FeetechSTS3215IO; pollen-robotics/support-feetech-sts3215',
+            zero_ticks=a.zero_ticks,direction=a.direction,kd=0,ki=0,
+            motor_condition='brand new at experiment start; commissioning and pilot runs already performed',
+            temperature='constant zero placeholder, matching upstream BAM recorder; not measured',
+            load='constant zero placeholder, matching upstream BAM recorder; not measured',
+            speed='Pypot present-speed conversion to deg/s, then direction and radians',
+            encoder_conversion='Pypot maps ticks 0..4095 to degrees -180..180'))
+    io=FeetechSTS3215IO(a.port)
+    ids=[a.id];saved={}
+    def get(name):
+        vals=getattr(io,'get_'+name)(ids)
+        if len(vals)!=1:raise RuntimeError(f'Missing {name} response')
+        return vals[0]
+    def setv(name,v):getattr(io,'set_'+name)({a.id:v})
+    def position():return float(a.direction*np.deg2rad(get('present_position')-zero_degrees))
+    def command(q):setv('goal_position',float(motor_angle(q)))
+    def feedback():
+        entry=dict(position=position(),speed=float(a.direction*np.deg2rad(get('present_speed'))),
+            load=0.,input_volts=float(get('present_voltage')*.1),temp=0.)
+        status=get('status')
+        if status:raise RuntimeError(f'Motor status fault: {status}')
+        entry['status']=status
+        return entry
+    def return_zero():
+        q=position();command(q);io.enable_torque(ids)
+        while abs(q)>0:
+            q=float(np.sign(q)*max(0,abs(q)-.01));command(q);time.sleep(.01)
+            if get('status'):raise RuntimeError('Motor status fault during return')
+        time.sleep(1)
+    try:
+        if get('model')!='FEETECH_STS3215' or get('mode')!=0 or io.is_torque_enabled(ids)[0]:
+            raise RuntimeError('Expected STS3215, position mode, torque off')
+        for name in ['P_coefficient','D_coefficient','I_coefficient','lock']:
+            saved[name]=get(name)
+        data['metadata']['settings_before']=saved.copy()
+        settings_dir=dest.parent/'settings';settings_dir.mkdir(exist_ok=True)
+        (settings_dir/path.name).write_text(json.dumps(saved,indent=2)+'\n')
+        setv('lock',0);time.sleep(.1)
+        for name,val in [('P_coefficient',a.kp),('D_coefficient',0),('I_coefficient',0)]:
+            setv(name,val);time.sleep(.1)
+            if get(name)!=val:raise RuntimeError(f'{name} readback mismatch')
+        return_zero()
+        goal,torque_enable=trajectory(0)
+        command(goal)
+        if torque_enable:io.enable_torque(ids)
+        else:io.disable_torque(ids)
+        time.sleep(1)
+        print(f'Recording {a.trajectory} P={a.kp}',flush=True)
+        start=time.monotonic()
+        while time.monotonic()-start<trajectory.duration:
+            t=time.monotonic()-start
+            goal,new_enable=trajectory(t)
+            if new_enable!=torque_enable:
+                if new_enable:io.enable_torque(ids)
+                else:io.disable_torque(ids)
+                torque_enable=new_enable;time.sleep(.001)
+            command_timestamp=time.monotonic()-start
+            if torque_enable:command(goal);time.sleep(.001)
+            t0=time.monotonic()-start;entry=feedback();t1=time.monotonic()-start
+            entry.update(timestamp=(t0+t1)/2,goal_position=float(goal),torque_enable=bool(torque_enable),command_timestamp=command_timestamp)
+            data['entries'].append(entry)
+        data['complete']=True
+        return_zero()
+    except BaseException as exc:
+        data['metadata']['stop_reason']=str(exc)
+        raise
+    finally:
+        errors=[]
+        try:io.disable_torque(ids)
+        except Exception as exc:errors.append(str(exc))
+        if saved:
+            try:
+                setv('lock',0);time.sleep(.1)
+                for name in ['P_coefficient','D_coefficient','I_coefficient','lock']:
+                    setv(name,saved[name]);time.sleep(.1)
+                    if get(name)!=saved[name]:raise RuntimeError(f'Restore failed: {name}')
+            except Exception as exc:errors.append(str(exc))
+        io.close()
+        data['metadata']['cleanup_errors']=errors
+        path.write_text(json.dumps(data,indent=2)+'\n')
+        print(f'Saved {path}: {len(data["entries"])} samples; complete={data["complete"]}',flush=True)
+        if errors:raise RuntimeError(errors)
 
 
-def read_data():
-    # position = control.read_present_position(ids)[0]
-    position = np.deg2rad(io.get_present_position([1])[0])
-    # position = np.deg2rad(motor.io.get_present_position([motor.id])[0])
-
-    # speed = np.deg2rad(motor.io.get_present_speed([motor.id])[0])  # TODO convert
-    # speed = motor.get_present_speed()
-    # speed = control.read_present_velocity(ids)[0]
-    speed = np.deg2rad(io.get_present_speed([1])[0])
-
-    load = 0  # TMP
-
-    volts = io.get_present_voltage([1])[0] * 0.1
-    # volts = 0
-
-    # temp = motor.io.get_present_temperature([motor.id])[0]
-    temp = 0
-
-    return {
-        "position": float(position),
-        "speed": float(speed),
-        "load": float(load),
-        "input_volts": float(volts),
-        "temp": float(temp),
-    }
-
-
-while time.time() - start < trajectory.duration:
-    t = time.time() - start
-    goal_position, new_torque_enable = trajectory(t)
-    if new_torque_enable != torque_enable:
-        if new_torque_enable:
-            # control.enable_torque(ids)
-            # motor.enable_torque()
-            io.enable_torque([1])
-        else:
-            # control.disable_torque(ids)
-            io.disable_torque([1])
-            # motor.disable_torque()
-        torque_enable = new_torque_enable
-        time.sleep(0.001)
-    if torque_enable:
-        # control.write_goal_position(ids, [goal_position])
-        io.set_goal_position({1: np.rad2deg(goal_position)})
-
-        # motor.goal_position = np.rad2deg(goal_position)
-        time.sleep(0.001)
-
-    t0 = time.time() - start
-    entry = read_data()
-
-    t1 = time.time() - start
-
-    entry["timestamp"] = (t0 + t1) / 2.0
-    entry["goal_position"] = goal_position
-    entry["torque_enable"] = torque_enable
-    data["entries"].append(entry)
-
-goal_position = data["entries"][-1]["position"]
-return_dt = 0.01
-max_variation = return_dt * 1.0
-while abs(goal_position) > 0:
-    if goal_position > 0:
-        goal_position = max(0, goal_position - max_variation)
-    else:
-        goal_position = min(0, goal_position + max_variation)
-
-    # control.write_goal_position(ids, [goal_position])
-    # motor.goal_position = np.rad2deg(goal_position)
-    io.set_goal_position({1: np.rad2deg(goal_position)})
-
-    time.sleep(return_dt)
-
-# control.write_goal_position(ids, [0])
-io.set_goal_position({1: 0})
-# motor.goal_position = 0
-time.sleep(1)
-
-# control.disable_torque(ids)
-io.disable_torque([1])
-# motor.disable_torque()
-
-
-# Format YYYY-MM-DD_HH:mm:ss"
-date = datetime.datetime.now().strftime("%Y-%m-%d_%Hh%Mm%S")
-
-filename = f"{args.logdir}/{date}.json"
-
-json.dump(data, open(filename, "w"))
+if __name__=='__main__':main()

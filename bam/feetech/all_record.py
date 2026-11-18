@@ -1,51 +1,24 @@
 # Copyright 2025 Marc Duclusaud & Grégoire Passault
+# Licensed under the Apache License, Version 2.0.
+"""BAM Feetech four-trajectory sweep; portable subprocess execution."""
+import argparse,subprocess,sys,time
 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at:
+def main():
+ p=argparse.ArgumentParser()
+ for name in ['mass','arm-mass','length','vin']:p.add_argument('--'+name,type=float,required=True)
+ for name in ['motor','port','logdir']:p.add_argument('--'+name,required=True)
+ p.add_argument('--id',type=int,required=True)
+ p.add_argument('--zero-ticks',type=int,required=True)
+ p.add_argument('--direction',type=int,choices=[-1,1],default=-1)
+ p.add_argument('--kps',type=int,nargs='+',default=[4,8,16,32])
+ p.add_argument('--trajectories',nargs='+',default=['up_and_down','sin_time_square','lift_and_drop','sin_sin'])
+ a=p.parse_args()
+ base=[sys.executable,'-m','bam.feetech.record']
+ for key in ['mass','arm_mass','length','vin','motor','port','logdir','id','zero_ticks','direction']:
+  base.extend(['--'+key.replace('_','-'),str(getattr(a,key))])
+ for kp in a.kps:
+  for trajectory in a.trajectories:
+   subprocess.run(base+['--kp',str(kp),'--trajectory',trajectory],check=True)
+   time.sleep(2)
 
-#     http://www.apache.org/licenses/LICENSE-2.0
-
-import argparse
-import os
-import time
-
-
-arg_parser = argparse.ArgumentParser()
-arg_parser.add_argument("--mass", type=float, required=True)
-arg_parser.add_argument("--length", type=float, required=True)
-arg_parser.add_argument("--motor", type=str, required=True)
-arg_parser.add_argument("--port", type=str, default="/dev/ttyUSB0")
-arg_parser.add_argument("--id", type=int, required=True)
-arg_parser.add_argument("--logdir", type=str, required=True)
-arg_parser.add_argument("--vin", type=float, default=5.1)
-arg_parser.add_argument("--speak", action="store_true")
-args = arg_parser.parse_args()
-
-# kps = [130, 275, 550, 1100]
-kps = [4, 8, 16, 32]
-trajectories = ["brutal", "sin_sin", "lift_and_drop", "up_and_down", "sin_time_square"]
-
-command_base = (
-    f"python3 -m bam.feetech.record --mass {args.mass} --length {args.length}"
-)
-command_base += f" --port {args.port} --logdir {args.logdir} --motor {args.motor} --id {args.id} --vin {args.vin}"
-
-
-for kp in kps:
-    for trajectory in trajectories:
-        sentence = f"Kp {kp}, trajectory {trajectory.replace('_', ' ')}"
-        print(sentence)
-
-        if args.speak:
-            from gtts import gTTS
-
-            myobj = gTTS(text=sentence, lang="en", slow=False)
-            myobj.save("/tmp/message.mp3")
-            os.system("mpg321 /tmp/message.mp3")
-
-        command = f"{command_base} --kp {kp} --trajectory {trajectory}"
-        os.system(command)
-
-        if trajectory == "sin_time_square":
-            time.sleep(3)
+if __name__=='__main__':main()

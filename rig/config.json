@@ -1,0 +1,46 @@
+{
+  "motor": "STS3215 12V",
+  "reference_file": "reference_centered_20261118_140050.json",
+  "arms": [
+    {
+      "length": 0.1,
+      "arm_mass": 0.0251
+    },
+    {
+      "length": 0.15,
+      "arm_mass": 0.0309
+    },
+    {
+      "length": 0.2,
+      "arm_mass": 0.0375
+    }
+  ],
+  "tip_assemblies": {
+    "yellow": {
+      "weights_with_tape_kg": 0.1323,
+      "hardware_kg": 0.0106,
+      "mass": 0.1429
+    },
+    "red": {
+      "weights_with_tape_kg": 0.2955,
+      "hardware_kg": 0.0106,
+      "mass": 0.3061
+    }
+  },
+  "current_configuration": {
+    "length": 0.1,
+    "arm_mass": 0.0251,
+    "mass": 0.3061,
+    "tip_label": "red"
+  },
+  "acquisition_status": "100mm red interrupted by USB disconnect: 7/16 complete, eighth partial saved under failed; torque-off and settings restoration unconfirmed.",
+  "motor_history": {
+    "condition_at_start": "brand new motor, user confirmed",
+    "initial_use": "Commissioning movements and pilot recordings in this experiment; no separate break-in procedure performed.",
+    "prior_runtime_hours": null
+  },
+  "temperature_review": "Earlier powered telemetry spikes remain unexplained. User explicitly approved BAM upstream temperature=0 placeholder acquisition with built-in protection unchanged and fault checks active; no host temperature monitoring.",
+  "completed_sessions": [
+    "data/bam_pypot_100mm_yellow/manifest.json"
+  ]
+}
