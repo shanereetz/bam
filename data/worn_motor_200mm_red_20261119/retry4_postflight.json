@@ -1,0 +1,10 @@
+{
+  "torque": 0,
+  "fault": 0,
+  "temperature": 32,
+  "voltage_raw": 125,
+  "P": 16,
+  "D": 32,
+  "I": 0,
+  "lock": 1
+}

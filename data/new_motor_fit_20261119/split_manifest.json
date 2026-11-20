@@ -1,0 +1,500 @@
+{
+  "train_count": 72,
+  "validation_count": 24,
+  "validation_kp": 8,
+  "dt": 0.005,
+  "samples_per_log": 1200,
+  "actuator": "sts3215",
+  "recorded_motor": "sts3215_12v",
+  "voltage": [
+    12.6
+  ],
+  "seeds": [
+    42,
+    2026
+  ],
+  "optimizer": "scipy differential_evolution; popsize=8 maxiter=180 tol=.0001 polish=True",
+  "objective": "mean over recordings of full-rollout position MAE; no state resets",
+  "files": [
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+      "sha256": "b8c02b1f9b04200f804cf44430232df3896198cdd2ff3a303e117b6522c81a2d",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131423_705866_sin_time_square_kp4.json",
+      "sha256": "b15b1a8335d84f30d7e3a56c7549cca3d54c4130c47fbc64ec1b6da8faea10cd",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131435_779169_lift_and_drop_kp4.json",
+      "sha256": "ec9550c3f36aa69ed4d0882dfe5b3ede716e18e588a53f083001b9e783bf5705",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131449_265210_sin_sin_kp4.json",
+      "sha256": "284dae7f3c3c13993f65aea216b40d1cdfaf76b6ea7724b384732812f69d1083",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131502_715730_up_and_down_kp8.json",
+      "sha256": "21b7ae3a67ba0124d0c538c66af5210555adc17b2056b4b905632589fd4c948d",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+      "sha256": "f5c395b119305405f9b27a9e86dbc069fadd8a0d75c3b357f9c0f2dda978fc50",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131528_326576_lift_and_drop_kp8.json",
+      "sha256": "496677b20acc7a97f91a41c5c7314061ddd8a04f66fd5d3be8d6bc22b411afdc",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131540_859552_sin_sin_kp8.json",
+      "sha256": "ff07dae426463349b8164072137b1d27e254bec400735c397b0be8d9d7edf8d3",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131554_237258_up_and_down_kp16.json",
+      "sha256": "c0fedd1ed1fffe02c56358c5cbf66ee1169a855fbff96b5e38c4825a5f462ba1",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131607_600364_sin_time_square_kp16.json",
+      "sha256": "616f01f9b56c4133a65ebc65dff411d6dacb7704c8bdb267ae724854797d58e2",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+      "sha256": "b38a1a66c00512e5c1d179b7300f1ac1fd8f44e6ddf4e06ad25ac3b8f5e07a65",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131632_309114_sin_sin_kp16.json",
+      "sha256": "1bb06f14a58e5d7bd3367c162ca3e88bb44eb681f0ee499bac1723709e1fc890",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131645_466771_up_and_down_kp32.json",
+      "sha256": "ecdd793b1920e86a483f72ecdb72f71b0a0df3264e04a470c012ec452e6ac1e8",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131658_828522_sin_time_square_kp32.json",
+      "sha256": "4bb93d63530b0bcf3c1a93a96ced1d923c43571e02477aaf3c677143e72d9c72",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131711_086047_lift_and_drop_kp32.json",
+      "sha256": "25145c6a758a3ef5b47d25bd601dce34aacd6e5ffa8cca2ef0c097cdabc3348a",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_red_20261119/processed/20261119_131724_767290_sin_sin_kp32.json",
+      "sha256": "3ea342bc461ed8b7fce982c76cbc8b64218314ccda3efba5034d8a134582b9d8",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132028_026199_up_and_down_kp4.json",
+      "sha256": "d86b57b45ea75a955fb79ef84ba6a2303a9a892118442e393eb119cf067c7ac0",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132041_434387_sin_time_square_kp4.json",
+      "sha256": "6f633221eb5501ff5e1df9302fd33e6afb0e1c8d6853494cc3843f42ed1e8bfe",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132053_500590_lift_and_drop_kp4.json",
+      "sha256": "891268d42fe4f704fea1601b43a722adc65540a3dacacc2414579694ae4128c6",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132107_054586_sin_sin_kp4.json",
+      "sha256": "187bea283664e6548124ed02c0dd449641421aba027dd6005057c5a513df7b1b",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132120_607892_up_and_down_kp8.json",
+      "sha256": "2a3f864437b53b94215a501555f3ee73aee42fb2ba61429ed33a7592ff069f00",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132133_988571_sin_time_square_kp8.json",
+      "sha256": "b291315433ba16fe16aaa3ce8274917dc962484d356ffbe0409d22323dc5cad4",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132146_134941_lift_and_drop_kp8.json",
+      "sha256": "33023cfacf255f3d1fc57d4d55132677f86940cd11ec66a1da0c9c8c833af70c",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132159_815452_sin_sin_kp8.json",
+      "sha256": "046d54824fd5b780836ec28924a78f9db41d8227c1a2bb932c9e8b85844159af",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132213_128468_up_and_down_kp16.json",
+      "sha256": "5712d5d12aaad6891008c645698566d368524d41dd4b92e92ec00cd830e73727",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132226_488092_sin_time_square_kp16.json",
+      "sha256": "f3b8f63a98e649c9f701a18e7d9a548ad45d5bd461e62f8275c74950764c776a",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132238_720046_lift_and_drop_kp16.json",
+      "sha256": "3c29d00b2f2c7102e98fa901d0f403203b30cd6831de2751cf5d0e9a05c03c36",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132252_399431_sin_sin_kp16.json",
+      "sha256": "d39c39336132119572acf2ac4d327b40d40ff715b86a2e03c0b8d6324aa9f69b",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132305_604617_up_and_down_kp32.json",
+      "sha256": "809e17f6ce507481be022a27275b0475960fb8cc5ca5c0116968771b872024ab",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132319_001614_sin_time_square_kp32.json",
+      "sha256": "9a9dca83b03c5452be11aa83c5771c7668a40b9fd07ea4f1f34775070c2575b0",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132331_321212_lift_and_drop_kp32.json",
+      "sha256": "a040ca67c77701f5a9089d8b91bfe99ad23d42701554847a3447d3e694e08625",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_100mm_yellow_20261119/processed/20261119_132345_076449_sin_sin_kp32.json",
+      "sha256": "93c050f17acba090f24c6b6bf07f1ae3cf060c1d7f86071fb438acbf01c2fead",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133614_333807_up_and_down_kp4.json",
+      "sha256": "de6fddeeff5b035e9acf6a68199a725c87fe8c98019140ccb889735f89b7c390",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133627_734460_sin_time_square_kp4.json",
+      "sha256": "19cde4c0c66526377883aad168a7387f04de4ba1fe2d6031e5eeb623c0dca60b",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133639_827718_lift_and_drop_kp4.json",
+      "sha256": "16e95eea074a93b2817e293d495da7883e84a25182f151090eb3dda305d8f4a9",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133651_932084_sin_sin_kp4.json",
+      "sha256": "69cb9a65d88ab6e28bcaa6f46be3fd3599f33d04a094749eb11fabd883fec886",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133705_415466_up_and_down_kp8.json",
+      "sha256": "d3e010cdaa1c40adf4e776827d45f25b461f36d28bebf9e18fc9151b93d96cf2",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133718_780129_sin_time_square_kp8.json",
+      "sha256": "30252fef21ea4e52350d178e88a3f4a903b06a003388c0add65e0d7fcaf79770",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133730_985456_lift_and_drop_kp8.json",
+      "sha256": "76e9d46f0bd5f1275bad6bfd4d594126b179298691bd3acccee441fb55f27bcf",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133743_183254_sin_sin_kp8.json",
+      "sha256": "4ecc3f1d9c15ef7780e1629f2b9f766424acda3a0e7435e7da781a996fdb24ea",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133756_528338_up_and_down_kp16.json",
+      "sha256": "b3acca7c6ffbdf87603791440ee2515f27ffb79921181bc5debb09d3e75902f4",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133809_877392_sin_time_square_kp16.json",
+      "sha256": "928a52cea0b8cfba2dd3fe4bbc9b4016b13faf7f679d4e593800f4942515a510",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133822_140339_lift_and_drop_kp16.json",
+      "sha256": "26550fbfa511281841bcda7ddb744f76b97f53ecf8a5127e065b833a5d77f033",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133834_380214_sin_sin_kp16.json",
+      "sha256": "b22b6850fb603fb182bcbcc9cc7597a3b3f5263023a6c4d0d135c5f4137230a3",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133847_512936_up_and_down_kp32.json",
+      "sha256": "921a167a2b0d6d78e0c2b8c8f39ae16258351f3c7f083b04f1300a1d744edb44",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133900_870109_sin_time_square_kp32.json",
+      "sha256": "aecea9e147108932d21ecfff80f1ae3aa596811a1ffdb48528e30ec3fd5f54de",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133913_141776_lift_and_drop_kp32.json",
+      "sha256": "828c72572fb5f35d3062f1dbe0e067c51550ace19105c3dda5fa54351e072e81",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+      "sha256": "2f7919f80e663ec8e8076dea65918b7d025d1e851cbb4ba7de600a49caba56e2",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134153_235496_up_and_down_kp4.json",
+      "sha256": "07de48a72ce7a232f14b953f10919110b23f23d8b04edc1d29a4284fe124cc99",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134206_604303_sin_time_square_kp4.json",
+      "sha256": "237a32af05bce92758fd4541e2987d71a6f0de5eeaa4ec71475574d703dcbb64",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134218_671009_lift_and_drop_kp4.json",
+      "sha256": "7bdb55f552447848a661912116b54a8cba00962435534049bd93c806d53def4b",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134232_205163_sin_sin_kp4.json",
+      "sha256": "518fc78bec9b8511b6572974316df06ffcaf4c1c0559a5b9f4fd8ff94f3db3c9",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134245_680489_up_and_down_kp8.json",
+      "sha256": "8e39e1fef2a12746e2caafcb2f06bdec2cc097d722b4ee96abdfad4c84b37b02",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134259_096775_sin_time_square_kp8.json",
+      "sha256": "366f7cee3ccee6f47c526a6c55a838ba42841dbe3c88aa712ae4d4fdab535de5",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134311_229420_lift_and_drop_kp8.json",
+      "sha256": "c5d3bbd77c48761f9f72ac8ce6315cf4a5c089b7c46517a9ca2f2fd2de33562e",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134324_846129_sin_sin_kp8.json",
+      "sha256": "ff702da8c8db5cdc98a19dbb018c490449e20f32551b15da59ac6fac1b4b3b50",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134338_174745_up_and_down_kp16.json",
+      "sha256": "647ecae5c16c65e60a52c77b77d5987c8aae78695e1c20993bb982f35eb417b8",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134351_531363_sin_time_square_kp16.json",
+      "sha256": "7b5d2a15a9bf4c90bdc4ae5da021bd613513743e2e8f2880f592dd8d2bc4258d",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134403_809411_lift_and_drop_kp16.json",
+      "sha256": "a8c7b687596585c579397ce6b64c887ac7e182737b859b250563f7a94587306e",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134417_517056_sin_sin_kp16.json",
+      "sha256": "32f77cf5a1575c0ee61bafda8f0b541bf6d15704b59d4b44c9c0768e4b8f8c73",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134430_656134_up_and_down_kp32.json",
+      "sha256": "5b259c02b044d81ed8fe9e601f1c04dfe927d0a6d6483a579081771de51e9b42",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134444_072195_sin_time_square_kp32.json",
+      "sha256": "e405f3cd7e5a79b433947207f53c08e8cf526e5afd2b9de22f298701a71e8887",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134456_334930_lift_and_drop_kp32.json",
+      "sha256": "cfc20071863984316b8cd97fc883444f90db9d800644c756d929376ec67d5f75",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_150mm_yellow_20261119/processed/20261119_134510_056889_sin_sin_kp32.json",
+      "sha256": "8bb477cce84f53082b05108c3f0e5bfc85cb9ea9b7aa69af7ee79870c4114827",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135400_704746_up_and_down_kp4.json",
+      "sha256": "ca9ac3a3a4d5aee70c503f019dd8a3d3cf501d8f651d401fb4b4cba40fb88068",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135414_046014_sin_time_square_kp4.json",
+      "sha256": "2998445a0f5d0ac0fe83070e54e27faac1e5f29412dc886bcb3b9eebd1ccbf42",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135426_106639_lift_and_drop_kp4.json",
+      "sha256": "d3f33ec9f98996de3bbb8ef2be8b4c3c9899c75e4d35fd39ce752fb80c4fcb0f",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135438_473652_sin_sin_kp4.json",
+      "sha256": "bc1fbf528368f701cfc3ca719cea3b38008ef54f8e1d0e136a7c06ca2ed5e8c7",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135451_878161_up_and_down_kp8.json",
+      "sha256": "b401c7c476b8708706ad2f3e8723f16da989b82debb6fd61291609f9797b7d0e",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135505_293038_sin_time_square_kp8.json",
+      "sha256": "dd871dc2cf03c9cfa5dcf18fe358dab5d94da40a844039cce44504b945e90f7f",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135517_480773_lift_and_drop_kp8.json",
+      "sha256": "0526122c2e0b38e393c28464239ec4457fcc131fcce6b28ed8d0b3844190aac0",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135529_940398_sin_sin_kp8.json",
+      "sha256": "171b78ea54b6374fa2594afab939c4cacd9f1bf84acc024cf470f2e29b6f7402",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135543_212772_up_and_down_kp16.json",
+      "sha256": "6936207b2b71bd46318b6a3da2ed77736583d9dd96664cc4bb1508ad73265d62",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135556_569253_sin_time_square_kp16.json",
+      "sha256": "ba6f06aac7b633172c4da754d5fc31ef72d3216668ceee106f3fcec003808ffd",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135608_789182_lift_and_drop_kp16.json",
+      "sha256": "f77a08f80b877f4186ce7d6700c192b44d7e7e28ebfb609202f1e39fc7aa32a0",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135621_312465_sin_sin_kp16.json",
+      "sha256": "73fb29c78f57dacfe406b741e3c2cf610561240a7c4eac5f35c767e971828fbd",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135634_470771_up_and_down_kp32.json",
+      "sha256": "71f12c851d0a95f4057a545c804b5f3568dc1677adfad2d8bd243d1cf03d8d79",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135647_818087_sin_time_square_kp32.json",
+      "sha256": "940855bdcfe3090f4c88ffd3c3736848fe55ecd62e351ab375acbf1178d4b571",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135700_093673_lift_and_drop_kp32.json",
+      "sha256": "1f7f241ca90655e08344ff273891dd930698f60f1d8e70dd3396730c70f8727f",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_red_20261119/processed/20261119_135712_434699_sin_sin_kp32.json",
+      "sha256": "bf1be53a0da5bece4dc8ea6c711fea445c2db508a67c2e27ff1417180a7ce1a1",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_135858_914494_up_and_down_kp4.json",
+      "sha256": "b76cdc57618a9b52293bcb7f92a839de198397e3b0023cb6060c78a6164e7af8",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_135912_323867_sin_time_square_kp4.json",
+      "sha256": "f5d4b16b2834549bcce2b7e8a1b669ac1676c1f244eb684ed4ef78414a130443",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_135924_412407_lift_and_drop_kp4.json",
+      "sha256": "fbf4ec747cb6705b5f37fda3bc69fee68cb56338d2c03ccaba8e1d1dd4cfe321",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_135936_784069_sin_sin_kp4.json",
+      "sha256": "01b52cc6d9eece7ea365613e48e3039094946bb1c2d8d40b3bd274b607735ad2",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_135950_240173_up_and_down_kp8.json",
+      "sha256": "b81a012b6aea04dccad99cbf1870f4b3518d9803882eadb067d91b1cbd027951",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140003_603932_sin_time_square_kp8.json",
+      "sha256": "9354bf822fd998f8eb0ae87f23637290529cab4a35add8bfacc17c51649c892c",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140015_742814_lift_and_drop_kp8.json",
+      "sha256": "e7950498e2d593e1d86d504ec19b612ea5a48b91dff33899952d44bc7e08de07",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140027_989770_sin_sin_kp8.json",
+      "sha256": "aed794777eefe967e274b30372587ecb78dfcc6d22d1bed602cb4ecec0268952",
+      "split": "validation"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140041_345907_up_and_down_kp16.json",
+      "sha256": "4be8894e8c0414df7a1ddcb65b3315c5de2299e75eb8777732b74c57ae4523ea",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140054_738541_sin_time_square_kp16.json",
+      "sha256": "f808736ae303c2f2800176d2cb485ff4bd28c45930d5139ff77e929eaf6ddb3b",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140107_016726_lift_and_drop_kp16.json",
+      "sha256": "191e6cc7a89801a0b8e007556348c4a4a19f999c42e3ec99ba2c5e07e955ae20",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140119_243195_sin_sin_kp16.json",
+      "sha256": "0ee6ad7d87b87349d75cb2eea3571e574d8ba35abca64a8e841105cf3931f161",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140132_391583_up_and_down_kp32.json",
+      "sha256": "81bdb733f4fe1eb7913032fba7ed999ff6fc4e9ea2d8b869c3cbca238a81f360",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140145_755179_sin_time_square_kp32.json",
+      "sha256": "d3787bb9b3d6483b2304c863b678c73be5ca7eb5b894dedcff51586e6cdbc839",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140158_057607_lift_and_drop_kp32.json",
+      "sha256": "8361c5a35a426510da8380964b4a3aac796445ba066f4bc15a2ea57e9495dc2f",
+      "split": "train"
+    },
+    {
+      "path": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+      "sha256": "3e2ad9403ce4ac765fcf4ecd78dd39b653d56dfb50a7db10d92249660e5074d9",
+      "split": "train"
+    }
+  ]
+}

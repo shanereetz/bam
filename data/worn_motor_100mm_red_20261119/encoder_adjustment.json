@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-19T14:31:01.003375-08:00",
+  "id": 3,
+  "position_before": 3114,
+  "old_offset_raw": 1059,
+  "old_min": 843,
+  "old_max": 3104,
+  "old_lock": 1,
+  "new_offset_raw": 1973,
+  "new_zero": 2200,
+  "new_min": 953,
+  "new_max": 3447,
+  "verified_position_after": 2200,
+  "verified_torque": 0,
+  "verified_fault": 0
+}

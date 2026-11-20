@@ -1,0 +1,209 @@
+{
+  "group_mae_deg": {
+    "m1": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 9.171598550588287,
+          "sin_sin": 8.30776081685578,
+          "sin_time_square": 13.79575626243999,
+          "up_and_down": 1.743965755711782
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 11.666999777676951,
+          "new_motor_100mm_yellow_20261119": 6.2731514668140065,
+          "new_motor_150mm_red_20261119": 6.79401457473757,
+          "new_motor_150mm_yellow_20261119": 10.123165081282803,
+          "new_motor_200mm_red_20261119": 7.514570132245873,
+          "new_motor_200mm_yellow_20261119": 7.156721045636558
+        },
+        "kp": {
+          "4": 8.331556487661603,
+          "16": 7.591669779074241,
+          "32": 8.841084772461036
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 5.772665732030375,
+          "sin_sin": 8.763999631586847,
+          "sin_time_square": 14.58320410537648,
+          "up_and_down": 1.9243351368467454
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 7.0137944611194865,
+          "new_motor_100mm_yellow_20261119": 6.776378622883564,
+          "new_motor_150mm_red_20261119": 6.971905484096128,
+          "new_motor_150mm_yellow_20261119": 10.769081918143677,
+          "new_motor_200mm_red_20261119": 7.395307303180242,
+          "new_motor_200mm_yellow_20261119": 7.639839119337569
+        },
+        "kp": {
+          "8": 7.761051151460111
+        }
+      }
+    },
+    "m2": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 5.2332281230624496,
+          "sin_sin": 8.076396472047312,
+          "sin_time_square": 13.696495516036416,
+          "up_and_down": 2.0378052440702836
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 9.67806506242877,
+          "new_motor_100mm_yellow_20261119": 6.24549373293284,
+          "new_motor_150mm_red_20261119": 7.1491424150187255,
+          "new_motor_150mm_yellow_20261119": 6.036464277086144,
+          "new_motor_200mm_red_20261119": 8.031923364476272,
+          "new_motor_200mm_yellow_20261119": 6.424799180881937
+        },
+        "kp": {
+          "4": 6.792204589773466,
+          "16": 6.977826742862568,
+          "32": 8.012912683776312
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 3.6707406863182683,
+          "sin_sin": 8.302406494719515,
+          "sin_time_square": 14.418758005777825,
+          "up_and_down": 2.2932330293042793
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 7.641086419658246,
+          "new_motor_100mm_yellow_20261119": 6.5443812187179855,
+          "new_motor_150mm_red_20261119": 7.242716272596883,
+          "new_motor_150mm_yellow_20261119": 6.42681864955148,
+          "new_motor_200mm_red_20261119": 8.505507768455491,
+          "new_motor_200mm_yellow_20261119": 6.6671969951997445
+        },
+        "kp": {
+          "8": 7.171284554029971
+        }
+      }
+    },
+    "m3": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 5.3503637827458554,
+          "sin_sin": 7.038875251325111,
+          "sin_time_square": 13.262518373564035,
+          "up_and_down": 0.5994575077685379
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 10.669822365978561,
+          "new_motor_100mm_yellow_20261119": 5.519910628479429,
+          "new_motor_150mm_red_20261119": 5.325440408068933,
+          "new_motor_150mm_yellow_20261119": 5.45191376301156,
+          "new_motor_200mm_red_20261119": 5.585414422195093,
+          "new_motor_200mm_yellow_20261119": 6.824320785371731
+        },
+        "kp": {
+          "4": 5.910081205900979,
+          "16": 6.0379277707988015,
+          "32": 7.7404022098528715
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 1.6750208566478857,
+          "sin_sin": 6.567658252842271,
+          "sin_time_square": 13.098073879072695,
+          "up_and_down": 0.679983324760329
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 5.27499045095374,
+          "new_motor_100mm_yellow_20261119": 5.40545790300942,
+          "new_motor_150mm_red_20261119": 5.200874851104642,
+          "new_motor_150mm_yellow_20261119": 5.3228677094279515,
+          "new_motor_200mm_red_20261119": 5.1083352454952,
+          "new_motor_200mm_yellow_20261119": 6.718578309993816
+        },
+        "kp": {
+          "8": 5.505184078330795
+        }
+      }
+    }
+  },
+  "fitted_reference_parity": [
+    {
+      "model": "m1",
+      "log_index": 0,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m1",
+      "log_index": 2,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m1",
+      "log_index": 8,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m1",
+      "log_index": 95,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m2",
+      "log_index": 0,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m2",
+      "log_index": 2,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m2",
+      "log_index": 8,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m2",
+      "log_index": 95,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m3",
+      "log_index": 0,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m3",
+      "log_index": 2,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m3",
+      "log_index": 8,
+      "max_error_rad": 0.0
+    },
+    {
+      "model": "m3",
+      "log_index": 95,
+      "max_error_rad": 0.0
+    }
+  ],
+  "validation_ablation_mae_deg": {
+    "m1": {
+      "fitted": 7.761051151460111,
+      "rate_limiter_disabled": 10.857493779451033,
+      "delay_zero": 8.789535105324626
+    },
+    "m2": {
+      "fitted": 7.171284554029971,
+      "rate_limiter_disabled": 9.715059336535226,
+      "delay_zero": 8.130034690162992
+    },
+    "m3": {
+      "fitted": 5.505184078330795,
+      "rate_limiter_disabled": 8.66094937100199,
+      "delay_zero": 6.399042369100296
+    }
+  }
+}

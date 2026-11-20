@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-11-19T15:45:43.779030-08:00",
+  "status": "validated_with_explicit_exclusion",
+  "motor": "sts3215_12v",
+  "motor_condition": "Old/worn per user; lifetime unknown; 64 completed profiles and two faulted attempts in this experiment",
+  "length_m": 0.2,
+  "arm_mass_kg": 0.0375,
+  "tip_mass_kg": 0.3061,
+  "tip_label": "red",
+  "mass_basis": "Previously measured rig masses",
+  "zero_ticks": 2198,
+  "zero_samples": [
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198,
+    2198
+  ],
+  "zero_basis": "Current stationary position treated as vertical under established ready-for-pass procedure",
+  "direction": -1,
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 3,
+  "preflight": {
+    "model": 777,
+    "position": 2198,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 27,
+    "fault": 0
+  },
+  "settings_before": {
+    "P": 16,
+    "D": 32,
+    "I": 0,
+    "lock": 1,
+    "acceleration": 0,
+    "goal_time_raw": 0,
+    "goal_speed_raw": 0,
+    "homing_offset_raw": 1973
+  },
+  "position_limits": [
+    953,
+    3447
+  ],
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "temperature_and_load": "Zero placeholders during trajectories; not measured",
+  "complete_cells": 15,
+  "failed_attempts": 11,
+  "total_samples": 47144,
+  "excluded_cells": [
+    {
+      "kp": 32,
+      "trajectory": "sin_time_square"
+    }
+  ],
+  "exclusion_reason": "User requested skipping P32 sin_time_square after repeated status 2 faults with reported voltage collapse; failed attempts retained separately",
+  "postflight": {
+    "torque": 0,
+    "fault": 0,
+    "temperature": 32,
+    "voltage_raw": 126,
+    "P": 16,
+    "D": 32,
+    "I": 0,
+    "lock": 1
+  }
+}

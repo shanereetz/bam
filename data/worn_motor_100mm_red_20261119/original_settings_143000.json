@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-19T14:30:00.384999-08:00",
+  "motor_id": 3,
+  "motor_condition": "old/worn, user reported; runtime unknown",
+  "length_m": 0.1,
+  "arm_mass_kg": 0.0251,
+  "tip_mass_kg": 0.3061,
+  "status": "awaiting vertical reference confirmation",
+  "settings": {
+    "position": 3114,
+    "mode": 0,
+    "torque": 0,
+    "voltage_raw": 126,
+    "temperature": 30,
+    "fault": 0,
+    "min_position": 843,
+    "max_position": 3104,
+    "homing_offset_raw": 1059,
+    "P": 16,
+    "D": 32,
+    "I": 0,
+    "lock": 1,
+    "acceleration": 0,
+    "goal_speed": 0
+  }
+}

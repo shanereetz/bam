@@ -1,0 +1,16 @@
+{
+  "model": "m2",
+  "actuator": "sts3215",
+  "kt": 0.6888468878451725,
+  "error_gain_ratio": 2.84564098979883,
+  "R": 9.929807757698638,
+  "armature": 0.04,
+  "q_offset": -0.1,
+  "max_velocity": 1.738743395284702,
+  "command_delay": 0.049274357037036205,
+  "friction_base": 0.09649386443300735,
+  "friction_stribeck": 0.1931768669705682,
+  "dtheta_stribeck": 0.18755971407162877,
+  "alpha": 9.690355988434153,
+  "friction_viscous": 0.1458561967349691
+}

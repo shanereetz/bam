@@ -1,0 +1,15 @@
+{
+  "interpretation": [
+    "Preliminary bounded optimization of M1/M2/M3, not an exhaustive fit of all six BAM models.",
+    "P=8 recordings were excluded from parameter fitting. Since they compare model families, these are validation scores, not an untouched final test.",
+    "All six configurations appear in train and validation; this tests gain interpolation, not unseen arm/load, another motor, or repeatability.",
+    "One recording per profile/gain/configuration: no repeated-trial uncertainty or confidence intervals.",
+    "Firmware speed/acceleration settings were not captured for the new motor; learned max_velocity and command_delay are effective model parameters, not direct register measurements.",
+    "12 V data use registered sts3215 actuator class with log vin=12.6 V and newly fitted parameters. The actuator class retains a 7.4 V description and oscilloscope-derived nominal PWM gain; gain ratio is optimized.",
+    "No periodic state resets. Initial measured position and speed seed each independent rollout.",
+    "Like official BAM batching, 1200 common samples are used: t=0 through 5.995 s. Seventy recordings lose a single final 5 ms endpoint; 26 lose none.",
+    "Parameter-bound hits and differing parameter sets with similar objective values imply model mismatch or weak identifiability; do not interpret electrical/friction/inertia estimates as independently measured constants.",
+    "No real current/torque measurements used; recorded load/temperature placeholders do not constrain optimization.",
+    "Training-selected seeds only; validation never enters optimizer objective. Reference simulator parity checks cover defaults, perturbed values and final fits."
+  ]
+}

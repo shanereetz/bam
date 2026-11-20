@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-11-19T13:41:53.034447-08:00",
+  "status": "complete_validated",
+  "motor": "sts3215_12v",
+  "motor_condition": "New at 2026-11-19 experiment start; 49 prior profiles including superseded reference run",
+  "length_m": 0.15,
+  "arm_mass_kg": 0.0309,
+  "tip_mass_kg": 0.1429,
+  "tip_label": "yellow",
+  "mass_basis": "Previously measured masses",
+  "zero_ticks": 2057,
+  "zero_confirmed": "User confirmed vertical before this pass",
+  "direction": -1,
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 1,
+  "preflight": {
+    "model": 777,
+    "position": 2059,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 35,
+    "fault": 0
+  },
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "movement_clearance": "User confirmed and requested no further clearance questions",
+  "temperature_and_load": "Zero placeholders during trajectories; not measured",
+  "reference_note": "Same arm mounting; retain vertical zero 2057 from 150 mm red",
+  "total_samples": 48986,
+  "complete_cells": 16,
+  "postflight": {
+    "model": 777,
+    "position": 2058,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 35,
+    "fault": 0
+  }
+}

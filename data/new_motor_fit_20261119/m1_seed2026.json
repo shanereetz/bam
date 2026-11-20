@@ -1,0 +1,13 @@
+{
+  "model": "m1",
+  "actuator": "sts3215",
+  "kt": 0.7180681520611347,
+  "error_gain_ratio": 3.1590387246797764,
+  "R": 9.99211480960419,
+  "armature": 0.04,
+  "q_offset": -0.1,
+  "max_velocity": 1.7069628237455061,
+  "command_delay": 0.0498368777158371,
+  "friction_base": 0.2,
+  "friction_viscous": 0.06283516436386795
+}

@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-19T14:55:04.779037-08:00",
+  "status": "complete_validated",
+  "motor": "sts3215_12v",
+  "motor_condition": "Old/worn per user; lifetime unknown; 16 prior experiment profiles",
+  "length_m": 0.1,
+  "arm_mass_kg": 0.0251,
+  "tip_mass_kg": 0.1429,
+  "tip_label": "yellow",
+  "mass_basis": "Previously measured rig masses",
+  "zero_ticks": 2200,
+  "zero_confirmed": "User confirmed level-set downward vertical; encoder recentered with approval",
+  "direction": -1,
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 3,
+  "preflight": {
+    "model": 777,
+    "position": 2199,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 25,
+    "fault": 0
+  },
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "movement_clearance": "Previously confirmed",
+  "temperature_and_load": "Zero placeholders during trajectories; not measured",
+  "encoder_adjustment": "../worn_motor_100mm_red_20261119/encoder_adjustment.json",
+  "reference_note": "Same mounting; retain zero 2200",
+  "total_samples": 48858,
+  "complete_cells": 16,
+  "postflight": {
+    "model": 777,
+    "position": 2200,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 30,
+    "fault": 0
+  }
+}

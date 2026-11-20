@@ -23,6 +23,7 @@ def main():
     p.add_argument('--port',required=True)
     p.add_argument('--id',type=int,required=True)
     p.add_argument('--motor',required=True)
+    p.add_argument('--motor-condition',default='unspecified')
     p.add_argument('--vin',type=float,required=True)
     p.add_argument('--logdir',required=True)
     p.add_argument('--trajectory',choices=list(trajectories),default='lift_and_drop')
@@ -42,7 +43,7 @@ def main():
         motor=a.motor,trajectory=a.trajectory,entries=[],complete=False,
         metadata=dict(driver='pypot FeetechSTS3215IO; pollen-robotics/support-feetech-sts3215',
             zero_ticks=a.zero_ticks,direction=a.direction,kd=0,ki=0,
-            motor_condition='brand new at experiment start; commissioning and pilot runs already performed',
+            motor_condition=a.motor_condition,
             temperature='constant zero placeholder, matching upstream BAM recorder; not measured',
             load='constant zero placeholder, matching upstream BAM recorder; not measured',
             speed='Pypot present-speed conversion to deg/s, then direction and radians',

@@ -1,0 +1,12 @@
+{
+  "git_commit": "169bfdaf3c58ea40651cfb43fcc58d74151384f2",
+  "sources": {
+    "bam/model.py": "13fd52f61df34ea5134138f4fca5bb355850064d51873c02f84e22df9910606a",
+    "bam/simulate.py": "1d7574886692e6b01b206b53700c906db1519973e57060e426740ebd411f727d",
+    "bam/actuator.py": "9b912f203a8fd9b837ff7c4489ef8ae10a1c8af42532a4c6eba6cd8ec331210c",
+    "bam/feetech/actuator.py": "5558ec8b89e5dc5af20690d584d574b8314b7987d2bc5fda8c698ab61d75ea57",
+    "bam/testbench.py": "bd1c211ab4c9e428112d6a0e96664d5a122c90a78f8c00930c0f672a2114928f",
+    "bam/fit.py": "7ccd4b126316f13f8430842f510f62a27db7f64f1669020e10cac7671e82e20c"
+  },
+  "note": "No source code changes for fit; output-only compiled kernel reproduces M1/M2/M3 simulator and is parity checked."
+}

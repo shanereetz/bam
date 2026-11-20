@@ -1,0 +1,182 @@
+[
+  {
+    "model": "m1",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": false,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 1.1102230246251565e-16
+  },
+  {
+    "model": "m1",
+    "perturbed": false,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": true,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m1",
+    "perturbed": true,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": false,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 1.1102230246251565e-16
+  },
+  {
+    "model": "m2",
+    "perturbed": false,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": true,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m2",
+    "perturbed": true,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": false,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": false,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 1.1102230246251565e-16
+  },
+  {
+    "model": "m3",
+    "perturbed": false,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131410_301356_up_and_down_kp4.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131516_138123_sin_time_square_kp8.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": true,
+    "log": "data/new_motor_100mm_red_20261119/processed/20261119_131619_821016_lift_and_drop_kp16.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": true,
+    "log": "data/new_motor_150mm_red_20261119/processed/20261119_133925_395491_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  },
+  {
+    "model": "m3",
+    "perturbed": true,
+    "log": "data/new_motor_200mm_yellow_20261119/processed/20261119_140210_268178_sin_sin_kp32.json",
+    "max_error_rad": 0.0
+  }
+]

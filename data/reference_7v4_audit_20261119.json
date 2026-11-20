@@ -1,0 +1,180 @@
+{
+  "audit_date": "2026-11-19",
+  "scope": "Read-only comparison of published BAM 7.4V raw recordings and 96 new-motor 12V recordings; no hardware access or code modification",
+  "sources": {
+    "reference_url": "https://huggingface.co/buckets/Gregwar/bam_data/resolve/feetech_sts3215_raw.zip?download=true",
+    "downloaded_archive": "/tmp/bam_audit_7v4.zip",
+    "reference_recordings": 100,
+    "local_raw_glob": "data/new_motor_*mm_*_20261119/raw/*.json",
+    "local_recordings": 96,
+    "reference_summary": "rig/bam_7v4_reference_dataset_summary.json"
+  },
+  "methods": {
+    "tracking_mae": "Mean absolute goal-position minus position over raw entries with torque_enable true, converted to degrees; ranges across configurations for specified trajectory and gain. Raw samples are not uniformly weighted in time.",
+    "position_derived_speed": "Position interpolated on 50ms grid from 0.05 to 5.90 seconds; adjacent differences divided by 0.05; 95th percentile of absolute derivative. Telemetry interpolated at interval midpoints for corresponding 95th percentile.",
+    "host_delay": "Feedback timestamp minus command_timestamp over powered local raw samples; includes command transmission, explicit 1ms pause and midpoint feedback read time; not physical actuator response latency."
+  },
+  "quantitative_comparisons": {
+    "p32_tracking_mae_degrees": {
+      "sin_time_square": {
+        "reference_range": [
+          17.09,
+          18.98
+        ],
+        "local_range": [
+          33.46,
+          33.57
+        ]
+      },
+      "sin_sin": {
+        "reference_range": [
+          2.94,
+          6.58
+        ],
+        "local_range": [
+          20.11,
+          20.36
+        ]
+      }
+    },
+    "p32_sin_time_square_speed_rad_s": {
+      "reference_position_derived_p95_range": [
+        5.48,
+        5.83
+      ],
+      "reference_logged_speed_p95_range": [
+        0.61,
+        0.64
+      ],
+      "local_position_derived_p95_range": [
+        2.76,
+        2.8
+      ],
+      "local_logged_speed_p95_range": [
+        2.76,
+        2.84
+      ]
+    },
+    "powered_sampling_median_ms": {
+      "reference_range": [
+        3.02,
+        3.08
+      ],
+      "local_range": [
+        2.26,
+        2.27
+      ]
+    },
+    "local_host_delay_ms": {
+      "median": 1.68052752,
+      "p99": 2.21368184,
+      "max": 7.2136565
+    },
+    "supply_volts": {
+      "reference": {
+        "metadata_vin": 7.4,
+        "measured_min": 6.6,
+        "measured_p1": 6.9,
+        "measured_median": 7.3,
+        "measured_max": 11.0
+      },
+      "local": {
+        "metadata_vin": 12.6,
+        "measured_min": 9.3,
+        "measured_p1": 12.6,
+        "measured_median": 12.6,
+        "measured_max": 13.1
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "real_fast_motion_difference",
+      "status": "confirmed_observation",
+      "finding": "Local 12V position traces show substantially worse fast-motion tracking and roughly half the position-derived speed of reference at P32.",
+      "caveat": "Different loads, voltage, motor variant and potentially firmware settings prevent motor-only causal attribution. Rate limiting is a hypothesis, not proven cause."
+    },
+    {
+      "id": "reference_speed_scale",
+      "status": "confirmed_observation",
+      "finding": "Reference logged speed is roughly 9x lower than position-derived speed, whereas local speed agrees.",
+      "evidence": [
+        ".venv/lib/python3.12/site-packages/pypot/dynamixel/conversion.py:130"
+      ],
+      "hypothesis": "Historical commented multiplication by 0.111 in Pypot conversion is consistent with discrepancy; exact reference acquisition driver version is not known."
+    },
+    {
+      "id": "different_loads",
+      "status": "confirmed",
+      "finding": "Reference has unloaded and 0.546/1.084kg loads at 0.10/0.15m; local has 0.1429/0.3061kg tip assemblies plus explicit arm mass at 0.10/0.15/0.20m. Reference arm_mass absent; loader defaults zero.",
+      "evidence": [
+        "rig/bam_7v4_reference_dataset_summary.json",
+        "bam/logs.py",
+        "bam/testbench.py:53"
+      ],
+      "caveat": "Uniform rod and point-tip mechanical model approximates actual mass distribution."
+    },
+    {
+      "id": "historical_integral_gain",
+      "status": "confirmed_code_gap",
+      "finding": "Preserved upstream recorder writes P and D=0 but does not write I; local recorder writes and verifies I=D=0. Historical files do not record I.",
+      "evidence": [
+        "rig/bam_feetech_record_upstream.py:61",
+        "bam/feetech/record.py:76"
+      ],
+      "caveat": "Historical I may have been zero, but that is not established by retained evidence."
+    },
+    {
+      "id": "settings_provenance",
+      "status": "confirmed_code_gap",
+      "finding": "New-motor recorder saves P,D,I,lock only; does not set or log acceleration, goal time, goal speed, torque limit or other firmware controls.",
+      "evidence": [
+        "bam/feetech/record.py:76"
+      ],
+      "caveat": "Worn-motor original-settings snapshot cannot retrospectively establish new-motor settings."
+    },
+    {
+      "id": "timing",
+      "status": "confirmed",
+      "finding": "Local powered sampling is faster than reference, and command-to-feedback timestamp differences are milliseconds; host timing does not explain the large observed position lag.",
+      "evidence": [
+        "bam/feetech/record.py:100"
+      ],
+      "caveat": "Feedback reads are sequential and midpoint timestamps approximate per-field timing."
+    },
+    {
+      "id": "model_assumptions",
+      "status": "confirmed",
+      "finding": "BAM STS3215 model explicitly includes target-rate limiting and fitted max_velocity; controller mapping/defaults originate from 7.4V. Log vin overrides default supply voltage, but does not validate controller assumptions for 12V.",
+      "evidence": [
+        "bam/feetech/actuator.py:24",
+        "bam/feetech/actuator.py:98",
+        "bam/actuator.py:214"
+      ]
+    },
+    {
+      "id": "coverage_telemetry",
+      "status": "confirmed",
+      "finding": "Reference includes legacy brutal and unloaded runs; local does not. Both record load and temperature as zero placeholders. Fitting uses metadata vin rather than each measured voltage entry.",
+      "evidence": [
+        "rig/bam_7v4_reference_dataset_summary.json",
+        "bam/feetech/record.py:60",
+        "bam/actuator.py:214"
+      ]
+    }
+  ],
+  "recommended_checks": [
+    "Capture complete firmware/configuration snapshots for both motors with exclusive serial access; include acceleration, goal time, goal speed, torque limits, deadbands, operating mode, voltage and firmware identity where available.",
+    "Before interpreting wear, compare identical rig/load/zero/direction/profiles/gains and documented firmware settings.",
+    "For reference comparison derive velocity from position consistently, or explicitly validate and correct historical telemetry scaling; preserve original reference data.",
+    "Fit distinct 12V parameters including target-rate limit; validate on held-out complete recordings and compare residuals by trajectory, gain and load.",
+    "Check actual arm and tip mass distributions before interpreting fitted inertia and friction; retain explicit assumptions.",
+    "Investigate voltage outliers separately before assuming they represent sustained supply droop."
+  ],
+  "caveats": [
+    "This is a cross-dataset comparison, not a controlled voltage or wear experiment.",
+    "No firmware settings or hardware were read by this audit.",
+    "Historical reference I and driver version are unknown.",
+    "Derived-speed ranges are descriptive percentiles, not fitted physical maximum velocities."
+  ]
+}

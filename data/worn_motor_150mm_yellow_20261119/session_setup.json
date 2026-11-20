@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-11-19T15:27:58.038125-08:00",
+  "status": "complete_validated",
+  "motor": "sts3215_12v",
+  "motor_condition": "Old/worn per user; lifetime unknown; 48 completed profiles and two faulted attempts in this experiment",
+  "length_m": 0.15,
+  "arm_mass_kg": 0.0309,
+  "tip_mass_kg": 0.1429,
+  "tip_label": "yellow",
+  "zero_ticks": 2216,
+  "direction": -1,
+  "reference_note": "Same arm mounting; retained reference from 150 mm red",
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 3,
+  "preflight": {
+    "model": 777,
+    "position": 2218,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 32,
+    "fault": 0
+  },
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "temperature_and_load": "Zero placeholders during trajectories, not measurements",
+  "total_samples": 49954,
+  "complete_cells": 16,
+  "postflight": {
+    "model": 777,
+    "position": 2211,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 32,
+    "fault": 0
+  }
+}

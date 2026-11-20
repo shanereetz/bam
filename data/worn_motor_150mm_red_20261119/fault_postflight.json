@@ -1,0 +1,47 @@
+{
+  "torque": {
+    "value": 0,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "fault": {
+    "value": 0,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "temperature": {
+    "value": 30,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "voltage_raw": {
+    "value": 126,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "position": {
+    "value": 2205,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "P": {
+    "value": 16,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "D": {
+    "value": 32,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "I": {
+    "value": 0,
+    "communication": 0,
+    "packet_error": 0
+  },
+  "lock": {
+    "value": 1,
+    "communication": 0,
+    "packet_error": 0
+  }
+}

@@ -1,0 +1,318 @@
+/home/sreetz/Documents/ChatGPT/BAM/bam/bam/fit.py:216: FutureWarning: `restart_strategy` has been deprecated in v4.4.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v4.4.0. From v4.4.0 onward, `restart_strategy` automatically falls back to `None`. `restart_strategy` will be supported in OptunaHub.
+  sampler = optuna.samplers.CmaEsSampler(
+[I 2026-11-18 16:03:14,164] A new study created in memory with name: no-name-afd812e2-fdab-4ba2-b13d-671cf687b2b2
+
+
+[1m[Trial 1, Best score: 0.07023941541590448][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m0.956919686638185[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m4.987499717127145[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m6.822738201415929[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.019304779613456103[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m-0.06221023392143113[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m36.32473167929931[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.03135910327536375[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.0535695579304307[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.3164320922386174[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 8, Best score: 0.031143234838201563][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m0.5905550473237082[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m4.935167969550011[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m5.817186945487707[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.01759727118326819[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m-0.025841773605127974[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m22.13867179671808[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.03253398501437267[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.06693337818972216[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.7189535670544475[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 16, Best score: 0.018980871122674912][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m0.8040188027640899[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m5.5208062651250325[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m8.919064101419782[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.011649564266211101[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.037054870417179975[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m25.182221392071895[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.020515211265419022[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.10730821813581377[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8103049869050514[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 23, Best score: 0.018980871122674912][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m0.8040188027640899[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m5.5208062651250325[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m8.919064101419782[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.011649564266211101[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.037054870417179975[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m25.182221392071895[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.020515211265419022[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.10730821813581377[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8103049869050514[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 31, Best score: 0.018980871122674912][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m0.8040188027640899[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m5.5208062651250325[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m8.919064101419782[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.011649564266211101[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.037054870417179975[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m25.182221392071895[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.020515211265419022[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.10730821813581377[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8103049869050514[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 38, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 45, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 52, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 60, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 68, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 75, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 83, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 90, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 97, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 104, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 111, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 118, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 125, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 132, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 139, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m
+
+
+[1m[Trial 144, Best score: 0.010765535519288083][0m
+[34mBest params found (saved to data/test_100mm_red_20261118/params_m1_pilot.json): [39m
+- [32mkt[39m: [33m1.1601067853627391[39m (min: 0.05, max: 2.5)
+- [32merror_gain_ratio[39m: [33m3.149826689088636[39m (min: 0.1, max: 10.0)
+- [32mR[39m: [33m7.1693869472519856[39m (min: 0.1, max: 10.0)
+- [32marmature[39m: [33m0.0007924796940488997[39m (min: 1e-05, max: 0.04)
+- [32mq_offset[39m: [33m0.05626530645610775[39m (min: -0.1, max: 0.1)
+- [32mmax_velocity[39m: [33m21.604823621913727[39m (min: 0.521553467881118, max: 52.1553467881118)
+- [32mcommand_delay[39m: [33m0.022338148865766523[39m (min: 0.0, max: 0.05)
+- [32mfriction_base[39m: [33m0.11890697620525287[39m (min: 0.0, max: 0.2)
+- [32mfriction_viscous[39m: [33m0.8613705736146147[39m (min: 0.0, max: 1.0)
+- [32mmodel[39m: [33mm1[39m
+- [32mactuator[39m: [33msts3215[39m

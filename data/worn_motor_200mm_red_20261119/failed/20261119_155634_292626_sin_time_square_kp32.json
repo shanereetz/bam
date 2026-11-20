@@ -1,0 +1,25 @@
+{
+  "mass": 0.3061,
+  "arm_mass": 0.0375,
+  "length": 0.2,
+  "kp": 32,
+  "vin": 12.6,
+  "motor": "sts3215_12v",
+  "trajectory": "sin_time_square",
+  "entries": [],
+  "complete": false,
+  "metadata": {
+    "driver": "pypot FeetechSTS3215IO; pollen-robotics/support-feetech-sts3215",
+    "zero_ticks": 2198,
+    "direction": -1,
+    "kd": 0,
+    "ki": 0,
+    "motor_condition": "Old/worn per user; lifetime unknown; 200mm red retry after four archived status 2 attempts",
+    "temperature": "constant zero placeholder, matching upstream BAM recorder; not measured",
+    "load": "constant zero placeholder, matching upstream BAM recorder; not measured",
+    "speed": "Pypot present-speed conversion to deg/s, then direction and radians",
+    "encoder_conversion": "Pypot maps ticks 0..4095 to degrees -180..180",
+    "stop_reason": "could not parse received data bytearray(b'\\xff\\x03\\x04\\x00') after sending DxlReadDataPacket(id=3, address=3, length=2)",
+    "cleanup_errors": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "created_at": "2026-11-19T15:11:32.093235-08:00",
+  "status": "complete_validated_with_archived_failed_attempts",
+  "motor": "sts3215_12v",
+  "motor_condition": "Old/worn per user; lifetime unknown; 32 prior profiles in this experiment",
+  "length_m": 0.15,
+  "arm_mass_kg": 0.0309,
+  "tip_mass_kg": 0.3061,
+  "tip_label": "red",
+  "mass_basis": "Previously measured rig masses",
+  "zero_ticks": 2216,
+  "zero_samples": [
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216,
+    2216
+  ],
+  "zero_basis": "Current stationary position treated as vertical under established ready-for-pass procedure",
+  "direction": -1,
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 3,
+  "preflight": {
+    "model": 777,
+    "position": 2216,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 27,
+    "fault": 0
+  },
+  "settings_before": {
+    "P": 16,
+    "D": 32,
+    "I": 0,
+    "lock": 1,
+    "acceleration": 0,
+    "goal_time_raw": 0,
+    "goal_speed_raw": 0,
+    "homing_offset_raw": 1973
+  },
+  "position_limits": [
+    953,
+    3447
+  ],
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "movement_clearance": "Previously confirmed; no further clearance questions requested",
+  "temperature_and_load": "Zero placeholders during trajectories; not measured",
+  "complete_cells": 16,
+  "retry_preflight": {
+    "model": 777,
+    "position": 2205,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 31,
+    "fault": 0
+  },
+  "retry_at": "2026-11-19T15:18:05.628640-08:00",
+  "total_samples": 49774,
+  "postflight": {
+    "model": 777,
+    "position": 2210,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 32,
+    "fault": 0
+  },
+  "excluded_failed_attempts": [
+    "failed/20261119_151326_846890_sin_time_square_kp16.json",
+    "failed/20261119_151805_706096_sin_time_square_kp16.json"
+  ]
+}

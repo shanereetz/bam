@@ -1,0 +1,248 @@
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161415_283043_up_and_down_kp4.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161440_867745_lift_and_drop_kp4.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161609_673021_sin_time_square_kp16.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161724_281944_sin_sin_kp32.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161531_548553_lift_and_drop_kp8.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161519_322725_sin_time_square_kp8.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161646_517058_up_and_down_kp32.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161622_003979_lift_and_drop_kp16.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161428_714682_sin_time_square_kp4.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161556_297087_up_and_down_kp16.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161659_867426_sin_time_square_kp32.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161505_953124_up_and_down_kp8.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161543_740122_sin_sin_kp8.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161712_203278_lift_and_drop_kp32.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161453_130508_sin_sin_kp4.json with duration 6.00s
+* Processing data/worn_motor_200mm_yellow_20261119/raw/20261119_161634_093030_sin_sin_kp16.json with duration 6.00s
+{
+  "recordings": [
+    {
+      "file": "20261119_161415_283043_up_and_down_kp4.json",
+      "kp": 4,
+      "trajectory": "up_and_down",
+      "samples": 2637,
+      "last_timestamp_s": 6.000517996988492,
+      "median_dt_ms": 2.249220517114736,
+      "p99_dt_ms": 2.8881779129733345,
+      "max_gap_ms": 4.855438513914123,
+      "min_voltage": 12.3,
+      "max_voltage": 13.0,
+      "min_angle_deg": -0.5292307692307734,
+      "max_angle_deg": 83.96076923076923
+    },
+    {
+      "file": "20261119_161428_714682_sin_time_square_kp4.json",
+      "kp": 4,
+      "trajectory": "sin_time_square",
+      "samples": 2639,
+      "last_timestamp_s": 6.000980083481409,
+      "median_dt_ms": 2.231376725831069,
+      "p99_dt_ms": 3.3498784067342067,
+      "max_gap_ms": 5.297130031976849,
+      "min_voltage": 12.200000000000001,
+      "max_voltage": 12.8,
+      "min_angle_deg": -37.009230769230776,
+      "max_angle_deg": 47.740769230769224
+    },
+    {
+      "file": "20261119_161440_867745_lift_and_drop_kp4.json",
+      "kp": 4,
+      "trajectory": "lift_and_drop",
+      "samples": 4429,
+      "last_timestamp_s": 5.999908690981101,
+      "median_dt_ms": 1.1095140071120113,
+      "p99_dt_ms": 2.5408771709771814,
+      "max_gap_ms": 5.136517487699166,
+      "min_voltage": 12.4,
+      "max_voltage": 13.0,
+      "min_angle_deg": -78.85923076923078,
+      "max_angle_deg": 0.9707692307692267
+    },
+    {
+      "file": "20261119_161453_130508_sin_sin_kp4.json",
+      "kp": 4,
+      "trajectory": "sin_sin",
+      "samples": 2668,
+      "last_timestamp_s": 6.000588107475778,
+      "median_dt_ms": 2.230692480225116,
+      "p99_dt_ms": 2.6514436601428324,
+      "max_gap_ms": 4.21100651146844,
+      "min_voltage": 12.4,
+      "max_voltage": 12.8,
+      "min_angle_deg": -89.57923076923078,
+      "max_angle_deg": 89.76076923076923
+    },
+    {
+      "file": "20261119_161505_953124_up_and_down_kp8.json",
+      "kp": 8,
+      "trajectory": "up_and_down",
+      "samples": 2620,
+      "last_timestamp_s": 5.999653174454579,
+      "median_dt_ms": 2.2483945067506284,
+      "p99_dt_ms": 3.454005693783987,
+      "max_gap_ms": 4.801641480298713,
+      "min_voltage": 12.3,
+      "max_voltage": 12.8,
+      "min_angle_deg": -0.879230769230773,
+      "max_angle_deg": 87.21076923076923
+    },
+    {
+      "file": "20261119_161519_322725_sin_time_square_kp8.json",
+      "kp": 8,
+      "trajectory": "sin_time_square",
+      "samples": 2659,
+      "last_timestamp_s": 6.001560687989695,
+      "median_dt_ms": 2.2292227658908814,
+      "p99_dt_ms": 3.2386294938623856,
+      "max_gap_ms": 4.911355004878715,
+      "min_voltage": 12.200000000000001,
+      "max_voltage": 13.0,
+      "min_angle_deg": -47.55923076923077,
+      "max_angle_deg": 53.54076923076923
+    },
+    {
+      "file": "20261119_161531_548553_lift_and_drop_kp8.json",
+      "kp": 8,
+      "trajectory": "lift_and_drop",
+      "samples": 4458,
+      "last_timestamp_s": 5.99968828848796,
+      "median_dt_ms": 1.111096004024148,
+      "p99_dt_ms": 2.432133828988298,
+      "max_gap_ms": 3.8593949866481125,
+      "min_voltage": 12.200000000000001,
+      "max_voltage": 13.0,
+      "min_angle_deg": -85.71923076923078,
+      "max_angle_deg": 0.44076923076922725
+    },
+    {
+      "file": "20261119_161543_740122_sin_sin_kp8.json",
+      "kp": 8,
+      "trajectory": "sin_sin",
+      "samples": 2652,
+      "last_timestamp_s": 5.9996875599899795,
+      "median_dt_ms": 2.23390749306418,
+      "p99_dt_ms": 2.9449107678374276,
+      "max_gap_ms": 5.582872545346618,
+      "min_voltage": 12.3,
+      "max_voltage": 12.8,
+      "min_angle_deg": -95.38923076923078,
+      "max_angle_deg": 95.56076923076922
+    },
+    {
+      "file": "20261119_161556_297087_up_and_down_kp16.json",
+      "kp": 16,
+      "trajectory": "up_and_down",
+      "samples": 2651,
+      "last_timestamp_s": 5.999903189018369,
+      "median_dt_ms": 2.2421632456826046,
+      "p99_dt_ms": 2.694250200875098,
+      "max_gap_ms": 4.992620990378782,
+      "min_voltage": 12.4,
+      "max_voltage": 13.0,
+      "min_angle_deg": -0.3492307692307737,
+      "max_angle_deg": 88.61076923076922
+    },
+    {
+      "file": "20261119_161609_673021_sin_time_square_kp16.json",
+      "kp": 16,
+      "trajectory": "sin_time_square",
+      "samples": 2669,
+      "last_timestamp_s": 6.000135666545248,
+      "median_dt_ms": 2.229549500043504,
+      "p99_dt_ms": 2.7572291303658845,
+      "max_gap_ms": 5.765998997958377,
+      "min_voltage": 4.800000000000001,
+      "max_voltage": 12.8,
+      "min_angle_deg": -53.53923076923077,
+      "max_angle_deg": 56.00076923076923
+    },
+    {
+      "file": "20261119_161622_003979_lift_and_drop_kp16.json",
+      "kp": 16,
+      "trajectory": "lift_and_drop",
+      "samples": 4480,
+      "last_timestamp_s": 6.000141944503412,
+      "median_dt_ms": 1.1064839782193303,
+      "p99_dt_ms": 2.4158439342863867,
+      "max_gap_ms": 3.652816027170047,
+      "min_voltage": 12.200000000000001,
+      "max_voltage": 12.9,
+      "min_angle_deg": -88.34923076923077,
+      "max_angle_deg": -0.17923076923077375
+    },
+    {
+      "file": "20261119_161634_093030_sin_sin_kp16.json",
+      "kp": 16,
+      "trajectory": "sin_sin",
+      "samples": 2641,
+      "last_timestamp_s": 6.000825794530101,
+      "median_dt_ms": 2.2303557489067316,
+      "p99_dt_ms": 3.668894641159568,
+      "max_gap_ms": 6.436640484025702,
+      "min_voltage": 7.1000000000000005,
+      "max_voltage": 13.0,
+      "min_angle_deg": -98.89923076923078,
+      "max_angle_deg": 98.99076923076923
+    },
+    {
+      "file": "20261119_161646_517058_up_and_down_kp32.json",
+      "kp": 32,
+      "trajectory": "up_and_down",
+      "samples": 2637,
+      "last_timestamp_s": 6.001821915036999,
+      "median_dt_ms": 2.246230505988933,
+      "p99_dt_ms": 2.7719631165382475,
+      "max_gap_ms": 6.162832461996004,
+      "min_voltage": 12.3,
+      "max_voltage": 12.8,
+      "min_angle_deg": -0.17923076923077375,
+      "max_angle_deg": 89.32076923076923
+    },
+    {
+      "file": "20261119_161659_867426_sin_time_square_kp32.json",
+      "kp": 32,
+      "trajectory": "sin_time_square",
+      "samples": 2654,
+      "last_timestamp_s": 5.999947488016915,
+      "median_dt_ms": 2.230438985861838,
+      "p99_dt_ms": 3.247295062756168,
+      "max_gap_ms": 5.30876251286827,
+      "min_voltage": 12.100000000000001,
+      "max_voltage": 12.9,
+      "min_angle_deg": -56.34923076923077,
+      "max_angle_deg": 56.880769230769225
+    },
+    {
+      "file": "20261119_161712_203278_lift_and_drop_kp32.json",
+      "kp": 32,
+      "trajectory": "lift_and_drop",
+      "samples": 4433,
+      "last_timestamp_s": 6.000273683544947,
+      "median_dt_ms": 1.1114299995824695,
+      "p99_dt_ms": 2.5721879163756918,
+      "max_gap_ms": 3.9583104953635484,
+      "min_voltage": 12.200000000000001,
+      "max_voltage": 12.8,
+      "min_angle_deg": -89.22923076923077,
+      "max_angle_deg": -0.08923076923077389
+    },
+    {
+      "file": "20261119_161724_281944_sin_sin_kp32.json",
+      "kp": 32,
+      "trajectory": "sin_sin",
+      "samples": 2655,
+      "last_timestamp_s": 6.002075936994515,
+      "median_dt_ms": 2.2278364922385663,
+      "p99_dt_ms": 3.5648883142857666,
+      "max_gap_ms": 5.854781513335183,
+      "min_voltage": 6.6000000000000005,
+      "max_voltage": 12.9,
+      "min_angle_deg": -100.30923076923078,
+      "max_angle_deg": 100.39076923076924
+    }
+  ],
+  "complete_cells": 16,
+  "total_samples": 49582,
+  "temperature": "Not measured; zero placeholder as upstream BAM Feetech recorder",
+  "processed_dt": 0.005
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "file": "20261118_160233_562286_up_and_down_kp4.json",
+    "fit_mae_deg": 0.6168197494533862,
+    "fit_rmse_deg": 0.739899270827042,
+    "evaluation": "training recording only; no held-out validation"
+  }
+]

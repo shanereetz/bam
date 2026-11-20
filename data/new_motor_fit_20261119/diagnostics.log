@@ -1,0 +1,319 @@
+/home/sreetz/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-nfhzmc99 because there was an issue with the default path (/home/sreetz/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{
+  "summary": {
+    "m1": {
+      "runs": [
+        {
+          "seed": 42,
+          "train_mae_deg": 8.254770346398962,
+          "nfev": 12754,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "seconds": 30.23388695716858,
+          "parameters": {
+            "kt": 0.7172582399553417,
+            "error_gain_ratio": 3.131576681493187,
+            "R": 9.996134705741582,
+            "armature": 0.04,
+            "q_offset": -0.1,
+            "max_velocity": 1.7075909278497334,
+            "command_delay": 0.05,
+            "friction_base": 0.2,
+            "friction_viscous": 0.06255997180327752
+          }
+        },
+        {
+          "seed": 2026,
+          "train_mae_deg": 8.255026367747217,
+          "nfev": 12328,
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "seconds": 29.181394577026367,
+          "parameters": {
+            "kt": 0.7180681520611347,
+            "error_gain_ratio": 3.1590387246797764,
+            "R": 9.99211480960419,
+            "armature": 0.04,
+            "q_offset": -0.1,
+            "max_velocity": 1.7069628237455061,
+            "command_delay": 0.0498368777158371,
+            "friction_base": 0.2,
+            "friction_viscous": 0.06283516436386795
+          }
+        }
+      ],
+      "selected_seed": 42,
+      "train_mae_deg": 8.25477034639896,
+      "validation_mae_deg": 7.761051151460111,
+      "default_train_mae_deg": 17.974209159280797,
+      "default_validation_mae_deg": 17.421864206692515,
+      "near_bounds": [
+        "R",
+        "armature",
+        "q_offset",
+        "command_delay",
+        "friction_base"
+      ]
+    },
+    "m2": {
+      "runs": [
+        {
+          "seed": 42,
+          "train_mae_deg": 7.260981338804116,
+          "nfev": 18182,
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "seconds": 65.26406645774841,
+          "parameters": {
+            "kt": 0.6682191577380111,
+            "error_gain_ratio": 3.2178852016566646,
+            "R": 9.991376929394304,
+            "armature": 0.03988369289764046,
+            "q_offset": -0.019256623094302316,
+            "max_velocity": 1.6665762403602287,
+            "command_delay": 0.049275458182151136,
+            "friction_base": 0.12000451550433802,
+            "friction_stribeck": 0.1879849910711928,
+            "dtheta_stribeck": 0.11364364773762242,
+            "alpha": 1.132921523000011,
+            "friction_viscous": 0.10510846873653062
+          }
+        },
+        {
+          "seed": 2026,
+          "train_mae_deg": 7.264350692194108,
+          "nfev": 18715,
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "seconds": 63.02203106880188,
+          "parameters": {
+            "kt": 0.6888468878451725,
+            "error_gain_ratio": 2.84564098979883,
+            "R": 9.929807757698638,
+            "armature": 0.04,
+            "q_offset": -0.1,
+            "max_velocity": 1.738743395284702,
+            "command_delay": 0.049274357037036205,
+            "friction_base": 0.09649386443300735,
+            "friction_stribeck": 0.1931768669705682,
+            "dtheta_stribeck": 0.18755971407162877,
+            "alpha": 9.690355988434153,
+            "friction_viscous": 0.1458561967349691
+          }
+        }
+      ],
+      "selected_seed": 42,
+      "train_mae_deg": 7.260981338804115,
+      "validation_mae_deg": 7.171284554029971,
+      "default_train_mae_deg": 17.552658425629293,
+      "default_validation_mae_deg": 16.97650119572999,
+      "near_bounds": [
+        "R",
+        "armature",
+        "command_delay",
+        "dtheta_stribeck",
+        "alpha"
+      ]
+    },
+    "m3": {
+      "runs": [
+        {
+          "seed": 42,
+          "train_mae_deg": 6.568913734369692,
+          "nfev": 15063,
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "seconds": 36.04458260536194,
+          "parameters": {
+            "kt": 2.157331604497639,
+            "error_gain_ratio": 0.9198200838422327,
+            "R": 2.0150890050437265,
+            "armature": 0.01880568015202588,
+            "q_offset": 0.014825373832927872,
+            "max_velocity": 1.8243455997634237,
+            "command_delay": 0.049910153157093885,
+            "friction_base": 0.17952379532239962,
+            "load_friction_base": 0.2288982321378393,
+            "friction_viscous": 0.0069942295939444885
+          }
+        },
+        {
+          "seed": 2026,
+          "train_mae_deg": 6.562803728850883,
+          "nfev": 14920,
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "seconds": 35.75418782234192,
+          "parameters": {
+            "kt": 2.478046457962739,
+            "error_gain_ratio": 1.0647559162810751,
+            "R": 2.39772169762976,
+            "armature": 0.016390360001664078,
+            "q_offset": 0.002194926067255868,
+            "max_velocity": 1.826658797518063,
+            "command_delay": 0.049991569027427435,
+            "friction_base": 0.16126559323002,
+            "load_friction_base": 0.30754389477140864,
+            "friction_viscous": 0.006980329725632307
+          }
+        }
+      ],
+      "selected_seed": 2026,
+      "train_mae_deg": 6.562803728850884,
+      "validation_mae_deg": 5.505184078330795,
+      "default_train_mae_deg": 17.762423154162136,
+      "default_validation_mae_deg": 17.18430407924609,
+      "near_bounds": [
+        "kt",
+        "command_delay",
+        "friction_viscous"
+      ]
+    }
+  },
+  "groups": {
+    "m1": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 9.171598550588287,
+          "sin_sin": 8.30776081685578,
+          "sin_time_square": 13.79575626243999,
+          "up_and_down": 1.743965755711782
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 11.666999777676951,
+          "new_motor_100mm_yellow_20261119": 6.2731514668140065,
+          "new_motor_150mm_red_20261119": 6.79401457473757,
+          "new_motor_150mm_yellow_20261119": 10.123165081282803,
+          "new_motor_200mm_red_20261119": 7.514570132245873,
+          "new_motor_200mm_yellow_20261119": 7.156721045636558
+        },
+        "kp": {
+          "4": 8.331556487661603,
+          "16": 7.591669779074241,
+          "32": 8.841084772461036
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 5.772665732030375,
+          "sin_sin": 8.763999631586847,
+          "sin_time_square": 14.58320410537648,
+          "up_and_down": 1.9243351368467454
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 7.0137944611194865,
+          "new_motor_100mm_yellow_20261119": 6.776378622883564,
+          "new_motor_150mm_red_20261119": 6.971905484096128,
+          "new_motor_150mm_yellow_20261119": 10.769081918143677,
+          "new_motor_200mm_red_20261119": 7.395307303180242,
+          "new_motor_200mm_yellow_20261119": 7.639839119337569
+        },
+        "kp": {
+          "8": 7.761051151460111
+        }
+      }
+    },
+    "m2": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 5.2332281230624496,
+          "sin_sin": 8.076396472047312,
+          "sin_time_square": 13.696495516036416,
+          "up_and_down": 2.0378052440702836
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 9.67806506242877,
+          "new_motor_100mm_yellow_20261119": 6.24549373293284,
+          "new_motor_150mm_red_20261119": 7.1491424150187255,
+          "new_motor_150mm_yellow_20261119": 6.036464277086144,
+          "new_motor_200mm_red_20261119": 8.031923364476272,
+          "new_motor_200mm_yellow_20261119": 6.424799180881937
+        },
+        "kp": {
+          "4": 6.792204589773466,
+          "16": 6.977826742862568,
+          "32": 8.012912683776312
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 3.6707406863182683,
+          "sin_sin": 8.302406494719515,
+          "sin_time_square": 14.418758005777825,
+          "up_and_down": 2.2932330293042793
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 7.641086419658246,
+          "new_motor_100mm_yellow_20261119": 6.5443812187179855,
+          "new_motor_150mm_red_20261119": 7.242716272596883,
+          "new_motor_150mm_yellow_20261119": 6.42681864955148,
+          "new_motor_200mm_red_20261119": 8.505507768455491,
+          "new_motor_200mm_yellow_20261119": 6.6671969951997445
+        },
+        "kp": {
+          "8": 7.171284554029971
+        }
+      }
+    },
+    "m3": {
+      "train": {
+        "trajectory": {
+          "lift_and_drop": 5.3503637827458554,
+          "sin_sin": 7.038875251325111,
+          "sin_time_square": 13.262518373564035,
+          "up_and_down": 0.5994575077685379
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 10.669822365978561,
+          "new_motor_100mm_yellow_20261119": 5.519910628479429,
+          "new_motor_150mm_red_20261119": 5.325440408068933,
+          "new_motor_150mm_yellow_20261119": 5.45191376301156,
+          "new_motor_200mm_red_20261119": 5.585414422195093,
+          "new_motor_200mm_yellow_20261119": 6.824320785371731
+        },
+        "kp": {
+          "4": 5.910081205900979,
+          "16": 6.0379277707988015,
+          "32": 7.7404022098528715
+        }
+      },
+      "validation": {
+        "trajectory": {
+          "lift_and_drop": 1.6750208566478857,
+          "sin_sin": 6.567658252842271,
+          "sin_time_square": 13.098073879072695,
+          "up_and_down": 0.679983324760329
+        },
+        "config": {
+          "new_motor_100mm_red_20261119": 5.27499045095374,
+          "new_motor_100mm_yellow_20261119": 5.40545790300942,
+          "new_motor_150mm_red_20261119": 5.200874851104642,
+          "new_motor_150mm_yellow_20261119": 5.3228677094279515,
+          "new_motor_200mm_red_20261119": 5.1083352454952,
+          "new_motor_200mm_yellow_20261119": 6.718578309993816
+        },
+        "kp": {
+          "8": 5.505184078330795
+        }
+      }
+    }
+  },
+  "ablations": {
+    "m1": {
+      "fitted": 7.761051151460111,
+      "rate_limiter_disabled": 10.857493779451033,
+      "delay_zero": 8.789535105324626
+    },
+    "m2": {
+      "fitted": 7.171284554029971,
+      "rate_limiter_disabled": 9.715059336535226,
+      "delay_zero": 8.130034690162992
+    },
+    "m3": {
+      "fitted": 5.505184078330795,
+      "rate_limiter_disabled": 8.66094937100199,
+      "delay_zero": 6.399042369100296
+    }
+  }
+}

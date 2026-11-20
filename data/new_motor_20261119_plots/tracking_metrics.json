@@ -1,0 +1,506 @@
+[
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 5.8637209532651005
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 3.3415513931565637
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.0285722627708487
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.3782452332565507
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 6.653862256457171
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 3.6888577389680024
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.2055558833543403
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.4514921178935858
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 6.138602973286954
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 3.458682665427442
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.0802306249488507
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.402069170263153
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 7.778845738873355
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 4.164253802710299
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.3943934951170083
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.5361477734949185
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 6.571549857178318
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 3.645090976646471
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.178703271437689
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.4515862261126957
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 8.676184496799564
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 4.655538191285725
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 2.579058165806052
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "up_and_down",
+    "time_weighted_mae_deg": 1.5991846388990711
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 35.07708106397379
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.714064445512996
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.12056849933884
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.49479204598787
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.970990798608945
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.663341564073
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.08287682549344
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.456076590561366
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 35.040737621695484
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.687006633485865
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.10328525970261
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.47967870438089
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.902823325417664
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.65151061046746
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.06209554576537
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.46512035606093
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.9480956253828
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.64979716934392
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.08772111179664
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.49903402299373
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.816840899701525
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.58927760411315
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 34.043557096125866
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_time_square",
+    "time_weighted_mae_deg": 33.46815267988982
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 27.909049910904894
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.975260959624556
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.770621362018513
+  },
+  {
+    "arm_mm": 100,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.270792380494935
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 28.325192964039516
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.975912849032696
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.84271816389784
+  },
+  {
+    "arm_mm": 100,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.251376176682562
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 27.993408644172387
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.95648941020781
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.80220372453351
+  },
+  {
+    "arm_mm": 150,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.218154528132406
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 28.394798757385132
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.895565340070338
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.805144497648513
+  },
+  {
+    "arm_mm": 150,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.206086326122325
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 28.193322559188278
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.95327469279184
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.817545833817043
+  },
+  {
+    "arm_mm": 200,
+    "tip": "yellow",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.209982010553954
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 4,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 28.743479445420615
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 8,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 23.938375327851567
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 16,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 21.878445047943764
+  },
+  {
+    "arm_mm": 200,
+    "tip": "red",
+    "kp": 32,
+    "trajectory": "sin_sin",
+    "time_weighted_mae_deg": 20.30114713662752
+  }
+]

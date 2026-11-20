@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-11-19T16:13:49.325353-08:00",
+  "status": "complete_validated",
+  "motor": "sts3215_12v",
+  "motor_condition": "Old/worn per user; lifetime unknown; prior 200mm red pass incomplete with archived faults",
+  "length_m": 0.2,
+  "arm_mass_kg": 0.0375,
+  "tip_mass_kg": 0.1429,
+  "tip_label": "yellow",
+  "zero_ticks": 2198,
+  "direction": -1,
+  "reference_note": "Same arm mounting; retain level-set reference from 200mm red",
+  "port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5AE6057083-if00",
+  "motor_id": 3,
+  "kps": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "trajectories": [
+    "up_and_down",
+    "sin_time_square",
+    "lift_and_drop",
+    "sin_sin"
+  ],
+  "expected_recordings": 16,
+  "processed_dt_s": 0.005,
+  "temperature_and_load": "Zero placeholders during trajectories, not measurements",
+  "preflight": {
+    "model": 777,
+    "position": 2223,
+    "mode": 0,
+    "torque": 0,
+    "voltage": 12.6,
+    "temperature": 32,
+    "fault": 0
+  },
+  "complete_cells": 16,
+  "total_samples": 49582,
+  "postflight": {
+    "torque": 0,
+    "fault": 0,
+    "temperature": 32,
+    "voltage_raw": 126,
+    "P": 16,
+    "D": 32,
+    "I": 0,
+    "lock": 1
+  }
+}

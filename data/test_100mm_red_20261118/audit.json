@@ -1,0 +1,12 @@
+{
+  "samples": 2626,
+  "duration_s": 5.998474938009167,
+  "median_interval_ms": 2.2454989957623184,
+  "p99_interval_ms": 3.0982276372378683,
+  "max_gap_ms": 6.52108398207929,
+  "tracking_mae_deg": 6.60968639732915,
+  "peak_measured_deg": 83.42395604395605,
+  "voltage_min": 12.200000000000001,
+  "voltage_max": 12.8,
+  "cleanup_errors": []
+}
